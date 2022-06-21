@@ -9,7 +9,7 @@
             <xpath expr="//field[@name='category_id']" position="after">
                 <field name="get_company_ids" invisible="1" />
                 <field name="company_ids" invisible="1" />
-                <field name="company_id" groups="contact_create_with_company_rq.group_view_company_in_contact" attrs="{'domain': [('id', 'in', company_ids)]}" />
+                <field name="company_id" groups="contact_create_with_company_rq.group_view_company_in_contact" />
             </xpath>
         </field>
     </record>
