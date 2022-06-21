@@ -4,7 +4,7 @@
     <record id="view_partner_form_inherit_company_in_contact" model="ir.ui.view">
         <field name="name">res.partner.view.form.inherit</field>
         <field name="model">res.partner</field>
-        <field name="inherit_id" ref="inherit_module_name.view_partner_form"/>
+        <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='category_id']" position="after">
                 <field name="company_id" groups="contact_create_with_company_rq.group_view_company_in_contact" />
