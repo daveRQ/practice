@@ -6,6 +6,15 @@ import json
 class ResPartnerCreateWithCompany(models.Model):
     _inherit = 'res.partner'
 
+    company_ids = fields.Many2many('res.company', string='')
+    get_company_ids = fields.Char(compute='_compute_get_company_ids', string='Get COmpany Ids')
+
+    @api.depends('company_ids')
+    def _compute_get_company_ids(self):
+        for rec in self:
+            rec.get_company_ids = True
+            rec.company_ids = self.env.user.company_ids.ids
+
     @api.model
     def default_get(self, fields):
         res = super(ResPartnerCreateWithCompany, self).default_get(fields)
