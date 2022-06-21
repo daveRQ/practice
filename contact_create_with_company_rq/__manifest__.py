@@ -10,7 +10,7 @@
         # '',
     ],
     'data': [
-        'views/company.xml'
+        'views/company.xml',
         'views/contact.xml'
     ],
     'installable': True
