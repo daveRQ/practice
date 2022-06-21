@@ -1,0 +1,15 @@
+<odoo>
+
+    <record id="category_contact" model="ir.module.category" >
+        <field name="name">Contactos Cambios</field>
+        <field name="description">Cambios para mejorar la administración de contactos</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="group_view_company_in_contact" model="res.groups">
+        <field name="name">Ver Compañia en Contacto</field>
+        <field name="category_id" ref="contact_create_with_company_rq.category_contact" />
+    </record>
+
+</odoo>
+
