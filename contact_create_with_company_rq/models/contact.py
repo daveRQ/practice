@@ -7,7 +7,7 @@ class ResPartnerCreateWithCompany(models.Model):
     _inherit = 'res.partner'
 
     company_ids_filter = fields.Many2many('res.company', string='')
-    get_company_ids = fields.Char(compute='_compute_get_company_ids', string='Get COmpany Ids')
+    get_company_ids = fields.Char(compute='_compute_get_company_ids_filter', string='Get COmpany Ids')
 
     @api.depends('company_ids_filter')
     def _compute_get_company_ids_filter(self):
