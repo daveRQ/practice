@@ -7,8 +7,6 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='category_id']" position="after">
-                <field name="get_company_ids" invisible="1" />
-                <field name="company_ids_filter" invisible="1" />
                 <field name="company_id" groups="contact_create_with_company_rq.group_view_company_in_contact" />
             </xpath>
         </field>
