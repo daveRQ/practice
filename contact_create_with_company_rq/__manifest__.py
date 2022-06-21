@@ -10,6 +10,7 @@
         # '',
     ],
     'data': [
+        'security/security.xml',
         'views/company.xml',
         'views/contact.xml'
     ],
