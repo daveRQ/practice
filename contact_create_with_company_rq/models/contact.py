@@ -15,7 +15,7 @@ class ResPartnerCreateWithCompany(models.Model):
     def default_get(self, fields):
         res = super(ResPartnerCreateWithCompany, self).default_get(fields)
         # res['company_id'] = self.env.company.id
-        raise ValidationError(self.env.context.get('company_id')
+        raise ValidationError(self.env.context.get('company_id'))
         return res
 
 
