@@ -1,1 +1,1 @@
-from . import company, contact, product
+from . import company, contact
