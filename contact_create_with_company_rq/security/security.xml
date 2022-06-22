@@ -1,13 +1,18 @@
 <odoo>
 
-    <record id="category_contact" model="ir.module.category" >
-        <field name="name">Contactos Cambios</field>
+    <record id="category_view_company" model="ir.module.category" >
+        <field name="name">Ver y Editar Compañias</field>
         <field name="description">Cambios para mejorar la administración de contactos</field>
-        <field name="sequence">20</field>
+        <field name="sequence">100</field>
     </record>
 
     <record id="group_view_company_in_contact" model="res.groups">
         <field name="name">Ver Compañia en Contacto</field>
+        <field name="category_id" ref="contact_create_with_company_rq.category_contact" />
+    </record>
+
+    <record id="group_view_company_in_product" model="res.groups">
+        <field name="name">Ver Compañia en Producto</field>
         <field name="category_id" ref="contact_create_with_company_rq.category_contact" />
     </record>
 
